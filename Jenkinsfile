@@ -8,7 +8,7 @@ node('ubuntu-Appserver-2140')
 
     stage('Build-and-Tag')
     {
-        app.docker.build('wiljany/car_docker_repo')
+        app = docker.build('wiljany/car_docker_repo')
     }
 
     stage('Post-to-dockerhub')
